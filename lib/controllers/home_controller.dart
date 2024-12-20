@@ -27,7 +27,7 @@ class HomeController extends GetxController {
 
   void _splashLoading() {
     Timer(const Duration(seconds: 5), () {
-      //Get.off(() => const HomeScreen());
+      Get.off(() => HomeScreen());
     });
   }
 
@@ -35,7 +35,7 @@ class HomeController extends GetxController {
     viewType.value = (viewType.value == ViewType.ListView)
         ? ViewType.GridView
         : ViewType.ListView;
-  }  
+  }
 
   void toggleDarkMode() {
     isDarkMode.toggle();
