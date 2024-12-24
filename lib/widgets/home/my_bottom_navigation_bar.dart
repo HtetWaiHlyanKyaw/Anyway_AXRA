@@ -2,12 +2,13 @@ import 'package:anyway_axura/controllers/navigation_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+
+import '../../constants/app_colors.dart';
 // import '../controllers/navigation_controller.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
   final NavigationController navigationController =
       Get.put(NavigationController());
-  final Color themeBlue = const Color.fromRGBO(3, 150, 166, 1);
   MyBottomNavigationBar({super.key});
 
   @override
@@ -27,7 +28,7 @@ class MyBottomNavigationBar extends StatelessWidget {
             elevation: 0,
             showUnselectedLabels: true,
             type: BottomNavigationBarType.fixed,
-            selectedItemColor: const Color.fromRGBO(3, 150, 166, 1),
+            selectedItemColor: AppColor.themeBlue,
             unselectedItemColor: Colors.grey,
             unselectedFontSize: 15,
             selectedFontSize: 15,
@@ -39,7 +40,7 @@ class MyBottomNavigationBar extends StatelessWidget {
                   height: 30,
                   colorFilter: ColorFilter.mode(
                       navigationController.selectedIndex.value == 0
-                          ? themeBlue
+                          ? AppColor.themeBlue
                           : Colors.grey,
                       BlendMode.srcIn),
                 ),
@@ -52,7 +53,7 @@ class MyBottomNavigationBar extends StatelessWidget {
                   height: 30,
                   colorFilter: ColorFilter.mode(
                       navigationController.selectedIndex.value == 1
-                          ? themeBlue
+                          ? AppColor.themeBlue
                           : Colors.grey,
                       BlendMode.srcIn),
                 ),
@@ -65,7 +66,7 @@ class MyBottomNavigationBar extends StatelessWidget {
                   height: 30,
                   colorFilter: ColorFilter.mode(
                       navigationController.selectedIndex.value == 2
-                          ? themeBlue
+                          ? AppColor.themeBlue
                           : Colors.grey,
                       BlendMode.srcIn),
                 ),
@@ -78,7 +79,7 @@ class MyBottomNavigationBar extends StatelessWidget {
                   height: 30,
                   colorFilter: ColorFilter.mode(
                       navigationController.selectedIndex.value == 3
-                          ? themeBlue
+                          ? AppColor.themeBlue
                           : Colors.grey,
                       BlendMode.srcIn),
                 ),
@@ -91,7 +92,7 @@ class MyBottomNavigationBar extends StatelessWidget {
                   height: 30,
                   colorFilter: ColorFilter.mode(
                       navigationController.selectedIndex.value == 4
-                          ? themeBlue
+                          ? AppColor.themeBlue
                           : Colors.grey,
                       BlendMode.srcIn),
                 ),

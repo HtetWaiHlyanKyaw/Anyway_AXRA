@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../constants/app_colors.dart';
+
 Widget myLocationButton({required VoidCallback? onPressed}) {
   return Container(
     decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: const Color.fromRGBO(3, 150, 166, 1)),
+        borderRadius: BorderRadius.circular(10), color: AppColor.themeBlue),
     child: IconButton(
       onPressed: onPressed,
-      color: const Color.fromRGBO(3, 150, 166, 1),
+      color: AppColor.themeBlue,
       icon: SvgPicture.asset(
         "assets/icons/gps.svg",
         width: 30,

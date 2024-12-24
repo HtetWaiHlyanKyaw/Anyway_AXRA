@@ -94,33 +94,36 @@
 
 // import '../controllers/navigation_controller.dart';
 
+import 'package:anyway_axura/controllers/app_bar_controller.dart';
 import 'package:anyway_axura/screens/home/home_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controllers/navigation_controller.dart';
-import '../../widgets/home_widgets/my_app_bar.dart';
-import '../../widgets/home_widgets/my_bottom_navigation_bar.dart';
+import '../../widgets/home/my_app_bar.dart';
+import '../../widgets/home/my_bottom_navigation_bar.dart';
 
 List<Widget> _pages = const [
   HomeScaffold(),
-  // ExploreScreen(),
-  // TicketScreen(),
-  // FavoriteScreen(),
-  // ProfileScreen()
 ];
+
+// List<Widget> _appBars = const [
+//   MyAppBar(),
+// ];
 
 class HomeScreen extends StatelessWidget {
   final NavigationController navigationController =
       Get.put(NavigationController());
 
+  final AppBarController appBarController = Get.put(AppBarController());
+
   HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 248, 248, 248),
+        backgroundColor: const Color.fromARGB(255, 248, 248, 248),
         appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(180.0),
+          preferredSize: Size.fromHeight(180),
           child: ClipRRect(
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(25),

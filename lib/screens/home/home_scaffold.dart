@@ -1,8 +1,8 @@
 // import 'package:anyway_create/widgets/my_nearby_event.dart';
 // import 'package:anyway_create/widgets/my_upcoming_event.dart';
-import 'package:anyway_axura/widgets/home_widgets/my_category_list.dart';
-import 'package:anyway_axura/widgets/home_widgets/my_nearby_event.dart';
-import 'package:anyway_axura/widgets/home_widgets/my_upcoming_event.dart';
+import 'package:anyway_axura/widgets/home/my_category_list.dart';
+import 'package:anyway_axura/widgets/home/my_nearby_event.dart';
+import 'package:anyway_axura/widgets/home/my_upcoming_event.dart';
 import 'package:flutter/material.dart';
 
 // import '../widgets/my_category_list.dart';

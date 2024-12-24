@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/app_colors.dart';
+
 Widget myFilledButton(
     {required String label,
     // required Color color,
@@ -25,7 +27,7 @@ Widget myFilledButton(
       // );
       Container(
           decoration: BoxDecoration(
-              color: const Color.fromRGBO(3, 150, 166, 1),
+              color: AppColor.themeBlue,
               borderRadius: BorderRadius.all(Radius.circular(6))),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 3.0, horizontal: 8),

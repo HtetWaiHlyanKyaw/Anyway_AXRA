@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../constants/app_colors.dart';
+
 Widget myCategoryListTile(
     {required Color color,
     required String label,
@@ -18,7 +20,7 @@ Widget myCategoryListTile(
               const EdgeInsets.only(left: 8.0, right: 8, top: 3, bottom: 3),
           child: IconButton(
             onPressed: onPressed,
-            color: const Color.fromRGBO(3, 150, 166, 1),
+            color: AppColor.themeBlue,
             icon: icon,
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:anyway_axura/controllers/home_controller.dart';
+import 'package:anyway_axura/screens/event/event_detail_screen.dart';
 import 'package:anyway_axura/screens/home/register_screen.dart';
 import 'package:anyway_axura/screens/home/signin_screen.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
           GetPage(name: '/splash', page: () => const SplashScreen()),
           GetPage(name: '/signin', page: () => const SignInScreen()),
           GetPage(name: '/register', page: () => RegisterScreen()),
+          GetPage(name: '/event_detail', page: () => const EventDetailScreen()),
         ],
       ),
     );
