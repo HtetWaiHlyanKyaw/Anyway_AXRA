@@ -10,7 +10,7 @@
 
 import 'package:anyway_axura/constants/app_colors.dart';
 import 'package:anyway_axura/widgets/home/my_filter_button.dart';
-import 'package:anyway_axura/widgets/home/my_noti_bar.dart';
+import 'package:anyway_axura/widgets/home/my_noti_button.dart';
 import 'package:anyway_axura/widgets/home/my_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
