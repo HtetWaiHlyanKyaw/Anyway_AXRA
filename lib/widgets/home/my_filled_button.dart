@@ -1,3 +1,4 @@
+import 'package:anyway_axura/constants/dimension_manager.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_colors.dart';
@@ -33,7 +34,8 @@ Widget myFilledButton(
             padding: const EdgeInsets.symmetric(vertical: 3.0, horizontal: 8),
             child: Text(
               "Join Now",
-              style: TextStyle(color: Colors.white, fontSize: 14),
+              style: TextStyle(
+                  color: Colors.white, fontSize: DimensionManager.font14),
             ),
           ));
   // Container();

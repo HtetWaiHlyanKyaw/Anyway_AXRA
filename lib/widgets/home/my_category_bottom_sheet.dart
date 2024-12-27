@@ -1,3 +1,4 @@
+import 'package:anyway_axura/constants/dimension_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -26,7 +27,10 @@ class MyCategoryBottomSheet extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20.0),
-            child: Text("All events"),
+            child: Text(
+              "All events",
+              style: TextStyle(fontSize: DimensionManager.font16),
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

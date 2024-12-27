@@ -1,3 +1,4 @@
+import 'package:anyway_axura/constants/dimension_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -24,7 +25,8 @@ Widget myCategoryListTile2({
               ),
               Text(
                 label,
-                style: const TextStyle(fontSize: 12, color: Colors.grey),
+                style: TextStyle(
+                    fontSize: DimensionManager.font12, color: Colors.grey),
               ),
             ],
           ),

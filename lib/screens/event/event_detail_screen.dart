@@ -4,6 +4,9 @@ import 'package:anyway_axura/widgets/home/my_noti_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../constants/dimension_manager.dart';
+import '../../widgets/my_main_button.dart';
+
 class EventDetailScreen extends StatelessWidget {
   const EventDetailScreen({super.key});
 
@@ -18,9 +21,10 @@ class EventDetailScreen extends StatelessWidget {
             bottomRight: Radius.circular(25),
           ),
         ),
-        title: const Text(
+        title: Text(
           "Event",
-          style: TextStyle(color: Colors.white, fontSize: 18),
+          style:
+              TextStyle(color: Colors.white, fontSize: DimensionManager.font18),
         ),
         centerTitle: true,
         backgroundColor: AppColor.themeBlue,
@@ -64,9 +68,9 @@ class EventDetailScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Text(
+                    Text(
                       "Job Event Title",
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: DimensionManager.font18),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 5.0),
@@ -79,11 +83,13 @@ class EventDetailScreen extends StatelessWidget {
                             colorFilter: ColorFilter.mode(
                                 AppColor.themeBlue, BlendMode.srcIn),
                           ),
-                          const Padding(
+                          Padding(
                             padding: EdgeInsets.only(left: 5.0),
                             child: Text(
                               "Novotel Hotel Yangon, Myanmar",
-                              style: TextStyle(color: Colors.grey),
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: DimensionManager.font14),
                             ),
                           ),
                         ],
@@ -99,11 +105,13 @@ class EventDetailScreen extends StatelessWidget {
                           colorFilter: ColorFilter.mode(
                               AppColor.themeBlue, BlendMode.srcIn),
                         ),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 5.0),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 5.0),
                           child: Text(
                             "Nov 17 - (10:00 AM-3:00 PM)",
-                            style: TextStyle(color: Colors.grey),
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: DimensionManager.font14),
                           ),
                         ),
                       ]),
@@ -120,9 +128,11 @@ class EventDetailScreen extends StatelessWidget {
                               ),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 5),
-                              child: const Text(
+                              child: Text(
                                 "Free",
-                                style: TextStyle(color: Colors.blue),
+                                style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: DimensionManager.font12),
                               ),
                             ),
                             const SizedBox(width: 10),
@@ -133,36 +143,40 @@ class EventDetailScreen extends StatelessWidget {
                               ),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 5),
-                              child: const Text(
+                              child: Text(
                                 "Art",
-                                style: TextStyle(color: Colors.orange),
+                                style: TextStyle(
+                                    color: Colors.orange,
+                                    fontSize: DimensionManager.font12),
                               ),
                             ),
                           ],
                         ),
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10.0),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
                       child: Text(
                         "About Event",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: DimensionManager.font16),
                       ),
                     ),
-                    const Text(
+                    Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
                       "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
                       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
                       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
                       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                       textAlign: TextAlign.justify,
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: DimensionManager.font14),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10.0),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
                       child: Text(
                         "Location",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: DimensionManager.font16),
                       ),
                     ),
                     Container(
@@ -173,26 +187,9 @@ class EventDetailScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColor.themeBlue,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 50, vertical: 10),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 5.0),
-                          child: Text(
-                            "Continue",
-                            style: TextStyle(color: Colors.white, fontSize: 18),
-                          ),
-                        ),
-                      ),
+                    MyMainButton(
+                      label: "Continue",
+                      onPressed: () {},
                     ),
                   ],
                 ),

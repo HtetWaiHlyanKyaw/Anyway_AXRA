@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants/app_colors.dart';
+import '../../constants/dimension_manager.dart';
 import 'my_category_list_tile_2.dart';
 import 'my_location_button.dart';
 import 'my_location_search_bar.dart';
@@ -25,7 +26,10 @@ class MyFilterBottomSheet extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const Text("Your Location"),
+              Text(
+                "Your Location",
+                style: TextStyle(fontSize: DimensionManager.font16),
+              ),
               Row(
                 children: [
                   Expanded(
@@ -41,9 +45,12 @@ class MyFilterBottomSheet extends StatelessWidget {
                   ),
                 ],
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0),
-                child: Text("Select event type"),
+                child: Text(
+                  "Select event type",
+                  style: TextStyle(fontSize: DimensionManager.font16),
+                ),
               ),
               Row(
                 children: [
@@ -94,7 +101,8 @@ class MyFilterBottomSheet extends StatelessWidget {
                   icon: "assets/icons/entertainment.svg",
                 ),
               ),
-              const Text("Meetup Day"),
+              Text("Meetup Day",
+                  style: TextStyle(fontSize: DimensionManager.font16)),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
@@ -106,10 +114,13 @@ class MyFilterBottomSheet extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.grey[200],
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 8.0, horizontal: 16),
-                          child: Center(child: Text("Today")),
+                          child: Center(
+                              child: Text("Today",
+                                  style: TextStyle(
+                                      fontSize: DimensionManager.font14))),
                         ),
                       ),
                     ),
@@ -120,10 +131,14 @@ class MyFilterBottomSheet extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.grey[200],
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 8.0, horizontal: 16),
-                          child: Center(child: Text("This week")),
+                          child: Center(
+                              child: Text(
+                            "This week",
+                            style: TextStyle(fontSize: DimensionManager.font14),
+                          )),
                         ),
                       ),
                     ),
@@ -134,10 +149,13 @@ class MyFilterBottomSheet extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.grey[200],
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 8.0, horizontal: 16),
-                          child: Center(child: Text("Any")),
+                          child: Center(
+                              child: Text("Any",
+                                  style: TextStyle(
+                                      fontSize: DimensionManager.font14))),
                         ),
                       ),
                     ),
@@ -164,7 +182,9 @@ class MyFilterBottomSheet extends StatelessWidget {
                           child: Text(
                             "Cancel",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: AppColor.themeBlue),
+                            style: TextStyle(
+                                color: AppColor.themeBlue,
+                                fontSize: DimensionManager.font16),
                           ),
                         ),
                       ),
@@ -184,7 +204,9 @@ class MyFilterBottomSheet extends StatelessWidget {
                           child: Text(
                             "Apply",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: DimensionManager.font16),
                           ),
                         ),
                       ),

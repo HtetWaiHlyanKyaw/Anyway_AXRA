@@ -6,12 +6,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 import '../../constants/app_colors.dart';
+import '../../constants/dimension_manager.dart';
 import '../../screens/event/event_detail_screen.dart';
 
 Widget myUpComingEvent() {
   return GestureDetector(
     onTap: () {
-      Get.to(() => EventDetailScreen());
+      Get.to(() => const EventDetailScreen());
     },
     child: Card(
       color: Colors.white,
@@ -28,6 +29,7 @@ Widget myUpComingEvent() {
                 flex: 1,
                 child: Image.asset(
                   "assets/images/event1.png",
+                  fit: BoxFit.cover,
                 ),
               ),
               Flexible(
@@ -38,9 +40,9 @@ Widget myUpComingEvent() {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Text(
+                      Text(
                         "Job Event Title",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: DimensionManager.font16),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 5.0),
@@ -53,9 +55,11 @@ Widget myUpComingEvent() {
                               colorFilter: ColorFilter.mode(
                                   AppColor.themeBlue, BlendMode.srcIn),
                             ),
-                            const Text(
+                            Text(
                               "Novotel Hotel Yangon, Myanmar",
-                              style: TextStyle(color: Colors.grey),
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: DimensionManager.font14),
                             ),
                           ],
                         ),
@@ -70,9 +74,11 @@ Widget myUpComingEvent() {
                             colorFilter: ColorFilter.mode(
                                 AppColor.themeBlue, BlendMode.srcIn),
                           ),
-                          const Text(
+                          Text(
                             "Nov 17 - (10:00 AM-3:00 PM)",
-                            style: TextStyle(color: Colors.grey),
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: DimensionManager.font14),
                           ),
                         ]),
                       ),

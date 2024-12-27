@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+import '../../constants/dimension_manager.dart';
+
 Widget myCategoryList() {
   return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
     myCategoryListTile(
@@ -57,9 +59,12 @@ Widget myCategoryList() {
             ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.0),
-          child: Text("All"),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          child: Text(
+            "All",
+            style: TextStyle(fontSize: DimensionManager.font14),
+          ),
         )
       ],
     )

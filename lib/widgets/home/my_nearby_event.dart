@@ -1,4 +1,5 @@
 import 'package:anyway_axura/constants/app_colors.dart';
+import 'package:anyway_axura/constants/dimension_manager.dart';
 import 'package:anyway_axura/widgets/home/my_filled_button.dart';
 import 'package:avatar_stack/avatar_stack.dart';
 import 'package:avatar_stack/positions.dart';
@@ -39,13 +40,14 @@ Widget myNearbyEvent() {
                           bottomRight: Radius.circular(8)),
                       color: Color(0xFFFFEDD5),
                     ),
-                    child: const Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 12.0, vertical: 2),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12.0, vertical: 2),
                       child: Text(
                         "Art",
-                        style:
-                            TextStyle(color: Color(0xFFFCA962), fontSize: 12),
+                        style: TextStyle(
+                            color: const Color(0xFFFCA962),
+                            fontSize: DimensionManager.font12),
                       ),
                     ),
                   ),
@@ -58,11 +60,11 @@ Widget myNearbyEvent() {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: Text(
                       "Job Event Title",
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: DimensionManager.font16),
                     ),
                   ),
                   Padding(
@@ -79,9 +81,11 @@ Widget myNearbyEvent() {
                                 AppColor.themeBlue, BlendMode.srcIn),
                           ),
                         ),
-                        const Text(
+                        Text(
                           "Novotel Hotel Yangon, Myanmar",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: DimensionManager.font12),
                         ),
                       ],
                     ),
@@ -99,9 +103,11 @@ Widget myNearbyEvent() {
                               AppColor.themeBlue, BlendMode.srcIn),
                         ),
                       ),
-                      const Text(
+                      Text(
                         "Nov 17 - (10:00 AM-3:00 PM)",
-                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: DimensionManager.font12),
                       ),
                     ]),
                   ),

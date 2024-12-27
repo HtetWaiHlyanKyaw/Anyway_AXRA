@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
+import '../../constants/dimension_manager.dart';
 import 'my_filter_bottom_sheet.dart';
 
 class MyAppBar extends StatelessWidget {
@@ -43,10 +44,10 @@ class MyAppBar extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         "Current Location",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: DimensionManager.font18,
                           color: Colors.white,
                         ),
                       ),
@@ -60,11 +61,11 @@ class MyAppBar extends StatelessWidget {
                                 Colors.white, BlendMode.srcIn),
                           ),
                           const SizedBox(width: 4),
-                          const Text(
+                          Text(
                             "Yangon, Myanmar",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 18,
+                              fontSize: DimensionManager.font18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

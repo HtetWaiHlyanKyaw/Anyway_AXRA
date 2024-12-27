@@ -5,6 +5,8 @@ import 'package:anyway_axura/widgets/home/my_nearby_event.dart';
 import 'package:anyway_axura/widgets/home/my_upcoming_event.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/dimension_manager.dart';
+
 // import '../widgets/my_category_list.dart';
 
 class HomeScaffold extends StatelessWidget {
@@ -20,9 +22,11 @@ class HomeScaffold extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: const Text(
+              child: Text(
                 "Event Categories",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                    fontSize: DimensionManager.font18,
+                    fontWeight: FontWeight.w500),
               ),
             ),
             // const SizedBox(height: 20),
@@ -33,16 +37,19 @@ class HomeScaffold extends StatelessWidget {
             // const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     "Upcoming Events",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        fontSize: DimensionManager.font18,
+                        fontWeight: FontWeight.w500),
                   ),
                   Text(
                     "See all",
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(
+                        color: Colors.grey, fontSize: DimensionManager.font14),
                   )
                 ],
               ),
@@ -66,16 +73,19 @@ class HomeScaffold extends StatelessWidget {
             // const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     "Nearby Events",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        fontSize: DimensionManager.font18,
+                        fontWeight: FontWeight.w500),
                   ),
                   Text(
                     "See all",
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(
+                        color: Colors.grey, fontSize: DimensionManager.font14),
                   )
                 ],
               ),

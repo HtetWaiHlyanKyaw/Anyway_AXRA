@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../constants/app_colors.dart';
+import '../../constants/dimension_manager.dart';
 
 Widget myCategoryListTile(
     {required Color color,
@@ -27,7 +28,7 @@ Widget myCategoryListTile(
       ),
       Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0),
-        child: Text(label),
+        child: Text(label, style: TextStyle(fontSize: DimensionManager.font14)),
       )
     ],
   );

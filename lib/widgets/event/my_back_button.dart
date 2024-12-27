@@ -5,7 +5,7 @@ Widget myBackButton() {
   return IconButton(
     color: Colors.white,
     icon: const Icon(
-      Icons.arrow_back,
+      Icons.arrow_back_ios,
       size: 25,
     ),
     onPressed: () {
