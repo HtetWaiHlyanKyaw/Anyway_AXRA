@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-
 import '../screens/home/home_screen.dart';
 
 enum ViewType { ListView, GridView }
@@ -27,7 +26,7 @@ class HomeController extends GetxController {
 
   void _splashLoading() {
     Timer(const Duration(seconds: 5), () {
-      //Get.off(() => const HomeScreen());
+      Get.off(() => HomeScreen());
     });
   }
 
@@ -35,7 +34,7 @@ class HomeController extends GetxController {
     viewType.value = (viewType.value == ViewType.ListView)
         ? ViewType.GridView
         : ViewType.ListView;
-  }  
+  }
 
   void toggleDarkMode() {
     isDarkMode.toggle();

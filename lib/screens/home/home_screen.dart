@@ -80,3 +80,64 @@
 //     );
 //   }
 // }
+
+// import 'package:anyway_create/controllers/navigation_controller.dart';
+// import 'package:anyway_create/screens/explore_screen.dart';
+// import 'package:anyway_create/screens/favorite_screen.dart';
+// import 'package:anyway_create/screens/home_screen.dart';
+// import 'package:anyway_create/screens/profile_screen.dart';
+// import 'package:anyway_create/screens/ticket_screen.dart';
+// import 'package:anyway_create/widgets/my_app_bar.dart';
+// import 'package:anyway_create/widgets/my_bottom_navigation_bar.dart';
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
+
+// import '../controllers/navigation_controller.dart';
+
+import 'package:anyway_axura/controllers/app_bar_controller.dart';
+import 'package:anyway_axura/screens/home/home_scaffold.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../controllers/navigation_controller.dart';
+import '../../widgets/home/my_app_bar.dart';
+import '../../widgets/home/my_bottom_navigation_bar.dart';
+
+List<Widget> _pages = const [
+  HomeScaffold(),
+];
+
+// List<Widget> _appBars = const [
+//   MyAppBar(),
+// ];
+
+class HomeScreen extends StatelessWidget {
+  final NavigationController navigationController =
+      Get.put(NavigationController());
+
+  final AppBarController appBarController = Get.put(AppBarController());
+
+  HomeScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: const Color.fromARGB(255, 248, 248, 248),
+        appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(180),
+          child: ClipRRect(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25),
+            ),
+            child: MyAppBar(),
+          ),
+        ),
+        body: Obx(() {
+          return IndexedStack(
+            index: navigationController.selectedIndex.value,
+            children: _pages,
+          );
+        }),
+        bottomNavigationBar: MyBottomNavigationBar());
+  }
+}

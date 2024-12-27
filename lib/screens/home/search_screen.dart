@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
 import '../../constants/dimension_manager.dart';
-import '../../controllers/home_controller.dart';
+// import '../../controllers/home_controller.dart';
 import '../../widgets/text_widget.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -10,7 +10,7 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final HomeController controller = Get.find<HomeController>();
+    // final HomeController controller = Get.find<HomeController>();
     return Scaffold(
         appBar: AppBar(
           title: BigText(
